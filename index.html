@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Page</title>
+    <!--Inline -> Attribute style (third; left to right or top to bottom (over rides external and internal, only for special cases))-->
+    <!--Internal -> Style tag (second; top to bottom, over rides external)-->
+    <!--External -> Seperate file link (first; top to bottom)-->
+    <link rel="stylesheet"  href="styles/styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="images/logo.png"  width="100" alt="Site Logo">
+            <h1>Savannah Harmon Portal Page</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wwr/index.html">WWR</a></li>
+                <li><a href="ice/">ICE</a></li>
+                <li><a href="#">Project</a></li>
+            </ul> 
+        </nav>
+        <main>
+            <section><a href="wwr/"><img src="images/" alt="Rafting Programmers"><a></section>
+            <section><img src="images/" alt="Hiking Programmers"></section>
+            <section><img src="images/" alt="Programming Programmers"></section>
+            <section><img src="images/" alt="Web Pioneers">
+                <table class="greyGridTable">
+                    <tr>
+                        <th>Pioneer</th>
+                        <th>Invention</th>
+                        <th>Fun Fact</th>
+                    </tr>
+                    <tr>
+                        <td>Sir Tim Berners-Lee</td>
+                        <td>HTML, HTTP, WWW, URL</td>
+                        <td>Knighted by Queen Elizabeth</td>
+                    </tr>
+                    <tr>
+                        <td>Vint Cerf</td>
+                        <td>Internet, TCP/IP</td>
+                        <td>Always wears a 3 piece suit</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Row 4, Col 2</td>
+                        <td>Row 4, Col 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 5, Col 1</td>
+                        <td>Row 5, Col 2</td>
+                        <td>Row 5, Col 3</td>
+                    </tr>
+                </table>
+                <div id="contact">
+                    <form action="#" method="post">
+                        <!--Name-->
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name"  required><br><br> 
+                        <!--Email-->
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <!--Message-->
+                        <label for="message">Message:</label>
+                        <input type="text" id="message" name="message" rows="4" colm="20" required></textarea><br><br>
+                        <!--newsletter checkbox-->
+                        <div class="stretch">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes" >
+                            <label for="newsletter">Subscribe to our newsletter</label><br><br>
+                        </div>
+                        <!-- Submit newsletter-->
+                        <input type="submit">
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; Harmon</p>
+        </footer>
+</body>
+</html>
+</div>
