@@ -1,77 +1,56 @@
-@font-face {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    src: url(../fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf);
+:root {
+    --primary: #6CA4C7;
+    --secondary: #4181AE;
+    --accent-1: #536974;
+    --accent-2: #9D0104;
+    --accent-3: #730100;
+    --white: #ffffff;
+    --text-dark: #222222;
+    --bg-light: #f4f7f0;
 }
 
+@font-face {
+    font-family: 'NanumMyeongjo' Arial, sans-serif;
+    src: url(../fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf) format('truetype');
+}
 
 body {
-    background: url(../images/background-op-4.png) ;
+    background: url(../images/background-gradient.png) ;
+    font-family: 'Calibri', "Helvetica" sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'NanumMyeongjo' serif;
 }
 
 #wrapper {
-    border: 3px solid #000000;
-    width: 1024px;
-    margin: 40px auto;
-    border-radius: 20px;
-    background: #E07970;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: var(white);
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-h1 {
-    font-family: 'Trbuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif;
-    font-size: 2em;
-}
-
-main section {
-    width: 360px;
-    height: 360px;
-    padding: 8px;
-    border: 8px solid #000000;
-}
-
-section img{
-    max-width: 100%;
-    height: auto;
+header {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0 20px;
+    border-bottom: 4px solid var(--secondary);
 }
 
 header h1 {
     align-self: center;
     justify-self: center;
-}
-
-header {
-    height: 200px
-    display: grid;
-    grid-template-colimns: 1fr 4fr;
-}
-
-#contact form {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
-
-.section {
-    grid-column: 1/3;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 437px 437px;
-}
-
-section {
-    width: 437px;
-    height: 437px;
-    border: 12px solid #000000;
-    box-sizing: border-box;
-    padding: 8px;
-    justify-self: center;
-    margin: 30px;
-    background: linear-gradient(#BBAB47 , #E07970);
+    color: var(--secondary);
 }
 
 nav {
-    background: #f9d58d;
-    font-size: 1.5em;
+    background: van(--secondary);
 }
 
 nav ul {
@@ -81,92 +60,147 @@ nav ul {
     justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 
 nav li {
-    display: flex;
-    align-items: center;
-    height: 50px;
+    flex: 1;
 }
 
 nav a {
-    color: #8ABA47;
-    font-size: 1.5em;
+    display: block;
+    color: var(--white);
+    font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 36px;
+    padding: 15px 0;
+    transition: background 0.3s ease;
+    text-align: center;
+
 }
 
 nav a:hover {
-    color: black;
-    text-shadow: 2.5px 2.5px #E07970;
-    background: #8ABA47;
+    color: var(--white);
+    background: var(--accent-1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 437px 437px;
+    gap: 30px;
+    padding: 40px;
+}
+
+section {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 20px;
+    background: linear-gradient(#fdfdfd, #222222);
+}
+
+section:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+section img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.greyGridTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: "Calibri", sans-serif;
+}
+
+.greyGridTable th {
+    background-color: var(--accent-2);
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+}
+
+.greyGridTable td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.greyGridTable tr:nth-child(even) {
+    background-color: var(--bg-light);
 }
 
 #contact {
-    width: 200px;
-    height: 14px;
-    min-height: 200px;
-    border: solid #000000 3px;
-    padding: 12px;
-    background: #DE8948;
-    position: fixed;
-    bottom: 0px;
-    right: 20px;
-    /*transition: height .85s ease-in*/
+    background-color: var(--bg-light);
+    padding: 40px;
+    border-radius: 0 0 12px 12px;
+    border-top: 4px solid var(--primary);
+    grid-column: 1 / -1;
 }
 
-#contact:hover {
-    transition: height .85s ease-in;
-    height: 200px;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input[type="submit"] {
+    background-color: var(--accent-2);
+    color: var(--white);
+    border: none;
+    padding: 15px 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--accent-3);
 }
 
 footer {
-    clear: both;
+    background-color: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
 }
 
-table.greyGridTable {
-  border: 2px solid #FFFFFF;
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-}
-table.greyGridTable td, table.greyGridTable th {
-  border: 1px solid #FFFFFF;
-  padding: 3px 4px;
-}
-table.greyGridTable td:nth-child(even) {
-  background: #f9d58d;
-}
-table.greyGridTable thead {
-  background: #FFFFFF;
-  border-bottom: 4px solid #333333;
-}
-table.greyGridTable thead th {
-  font-size: 15px;
-  font-weight: bold;
-  color: #333333;
-  text-align: center;
-  border-left: 2px solid #333333;
-}
-table.greyGridTable thead th:first-child {
-  border-left: none;
-}
-
-table.greyGridTable tfoot td {
-  font-size: 14px;
-}
-
-@median (max-width:1024px) {
-    #wrapper{
-        width: 100%;
-        margin: unset;
-    }
+@media (max-width: 1024px) {
     main{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
-    main section{
-        width: 100%;
-        heigth: 100%
+
+    header{
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        justify-self: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 }

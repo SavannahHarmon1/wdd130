@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Page</title>
+    <title>Savannah | Portal Page</title>
     <!--Inline -> Attribute style (third; left to right or top to bottom (over rides external and internal, only for special cases))-->
     <!--Internal -> Style tag (second; top to bottom, over rides external)-->
     <!--External -> Seperate file link (first; top to bottom)-->
@@ -15,45 +15,60 @@
             <img src="images/logo.png"  width="100" alt="Site Logo">
             <h1>Savannah Harmon Portal Page</h1>
         </header>
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="wwr/index.html">WWR</a></li>
                 <li><a href="ice/">ICE</a></li>
-                <li><a href="#">Project</a></li>
+                <li><a href="client_report.html">Project</a></li>
             </ul> 
         </nav>
+        
         <main>
-            <section><a href="wwr/"><img src="images/" alt="Rafting Programmers"><a></section>
-            <section><img src="images/" alt="Hiking Programmers"></section>
-            <section><img src="images/" alt="Programming Programmers"></section>
-            <section><img src="images/" alt="Web Pioneers">
+            <div class="gallery">
+                <section>
+                    <a href="wwr/index.html">
+                        <img src="images/programmers-rafting.png" alt="Programmers rafting">
+                    </a>
+                </section>
+                <section><img src="images/programmers-hiking.png" alt="Programmers hiking"></section>
+                <section><img src="images/programmers-programming.png" alt="Programmers coding"></section>
+            </div>
+
+            <section class="info-section">
+                <h2>Web Pioneers</h2>
                 <table class="greyGridTable">
-                    <tr>
-                        <th>Pioneer</th>
-                        <th>Invention</th>
-                        <th>Fun Fact</th>
-                    </tr>
-                    <tr>
-                        <td>Sir Tim Berners-Lee</td>
-                        <td>HTML, HTTP, WWW, URL</td>
-                        <td>Knighted by Queen Elizabeth</td>
-                    </tr>
-                    <tr>
-                        <td>Vint Cerf</td>
-                        <td>Internet, TCP/IP</td>
-                        <td>Always wears a 3 piece suit</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Row 4, Col 2</td>
-                        <td>Row 4, Col 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 5, Col 1</td>
-                        <td>Row 5, Col 2</td>
-                        <td>Row 5, Col 3</td>
-                    </tr>
+                    <thread>
+                        <tr>
+                            <th>Pioneer</th>
+                            <th>Invention</th>
+                            <th>Fun Fact</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td>Sir Tim Berners-Lee</td>
+                            <td>HTML, HTTP, WWW, URL</td>
+                            <td>Knighted by Queen Elizabeth</td>
+                        </tr>
+
+                        <tr>
+                            <td>Vint Cerf</td>
+                            <td>Internet, TCP/IP</td>
+                            <td>Always wears a 3 piece suit</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Row 4, Col 2</td>
+                            <td>Row 4, Col 3</td>
+                        </tr>
+                        <tr>
+                            <td>Row 5, Col 1</td>
+                            <td>Row 5, Col 2</td>
+                            <td>Row 5, Col 3</td>
+                        </tr>
+                    </tbody>
                 </table>
                 <div id="contact">
                     <form action="#" method="post">
@@ -78,8 +93,8 @@
             </section>
         </main>
         <footer>
-            <p>&copy; Harmon</p>
+            <p>&copy; 2026 Savannah Harmon | BYU-Idaho</p>
         </footer>
+    </div>
 </body>
 </html>
-</div>
